@@ -1,0 +1,26 @@
+
+.root{
+    -fx-background-image: url('back1.jpeg');
+    -fx-background-size: cover;
+}
+TextField{
+    -fx-border-color: white;
+    -fx-background-color: transparent;
+    -fx-border-radius: 50;
+    -fx-text-fill: white;
+}
+
+Button{
+    -fx-background-color: seagreen;
+    -fx-background-radius: 5em;
+    -fx-text-fill: white;
+}
+#addPhotoBtn{
+    -fx-background-color: transparent;
+    -fx-max-height: 60;
+    -fx-min-height: 60;
+    -fx-min-width: 60;
+    -fx-max-width: 60;
+    -fx-border-radius: 50;
+    -fx-border-color: white;
+}
