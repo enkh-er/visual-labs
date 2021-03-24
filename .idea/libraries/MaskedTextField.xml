@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MaskedTextField">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/MaskedTextField/out/artifacts/MaskedTextField_jar/MaskedTextField.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

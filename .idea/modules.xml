@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaFX_Hylbar_App/JavaFX_Hylbar_App.iml" filepath="$PROJECT_DIR$/JavaFX_Hylbar_App/JavaFX_Hylbar_App.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab3_daalgawar2/Lab3_daalgawar2.iml" filepath="$PROJECT_DIR$/Lab3_daalgawar2/Lab3_daalgawar2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MaskedTextField/MaskedTextField.iml" filepath="$PROJECT_DIR$/MaskedTextField/MaskedTextField.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TitleBorder/TitleBorder.iml" filepath="$PROJECT_DIR$/TitleBorder/TitleBorder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Visual/Visual.iml" filepath="$PROJECT_DIR$/Visual/Visual.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Visual_lab5/Visual_lab5.iml" filepath="$PROJECT_DIR$/Visual_lab5/Visual_lab5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Visual_labs.iml" filepath="$PROJECT_DIR$/.idea/Visual_labs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Zeeliin hvv bodoh/Zeeliin hvv bodoh.iml" filepath="$PROJECT_DIR$/Zeeliin hvv bodoh/Zeeliin hvv bodoh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab3_18b1num0742/lab3_18b1num0742.iml" filepath="$PROJECT_DIR$/lab3_18b1num0742/lab3_18b1num0742.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab3_daalgawar1/lab3_daalgawar1.iml" filepath="$PROJECT_DIR$/lab3_daalgawar1/lab3_daalgawar1.iml" />
+    </modules>
+  </component>
+</project>
