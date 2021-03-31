@@ -1,0 +1,35 @@
+.background {
+    -fx-background-color: #e9ecf2     ;
+    -fx-padding:20;
+}
+.button{
+    -fx-background-color: #e9ecf2;
+    -fx-border-color: white gray gray white;
+    -fx-border-width:2px;
+}
+.homePageBtn{
+    -fx-font-family: "Times New Roman", Helvetica, Arial, sans-serif;
+    -fx-font-size: 16pt;
+    -fx-font-weight: bold;
+}
+.text-field{
+    -fx-background-radius: 0;
+    -fx-border-color: gray white white gray;
+    -fx-border-width:1px;
+}
+.combo-box{
+    -fx-border-color:gray white white gray;
+    -fx-border-style:solid;
+    -fx-border-width:1;
+}
+
+.combo-box .list-cell{
+    -fx-background-color:white;
+    -fx-text-fill: black;
+}
+.combo-box .list-cell:hover{
+    -fx-background-color:lightblue;
+}
+.table-view .column-header {
+    -fx-font-weight: 600;
+}
