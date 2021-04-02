@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import sample.MaskedTextField?>
 
 <AnchorPane prefHeight="300.0" prefWidth="350.0" styleClass="background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.NewCustomerController">
    <children>
@@ -33,12 +34,12 @@
             <TextField fx:id="txtAccountNumber" GridPane.columnIndex="1" />
             <TextField fx:id="txtFirstName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="txtLastName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="txtPhoneNumber" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField fx:id="txtEmergencyName" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField fx:id="txtEmergencyPhone" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <MaskedTextField fx:id="txtPhoneNumber" mask="###-###-####" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <MaskedTextField fx:id="txtEmergencyPhone" mask="###-###-####" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
-      <Button fx:id="btnOK" layoutX="154.0" layoutY="241.0" mnemonicParsing="false" prefWidth="90.0" text="OK" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="100.0" />
+      <Button fx:id="btnOK" layoutX="154.0" layoutY="241.0" mnemonicParsing="false" onAction="#saveCustomer" prefWidth="90.0" text="OK" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="100.0" />
       <Button fx:id="btnCancel" layoutX="269.0" layoutY="241.0" mnemonicParsing="false" onAction="#closeDialogStage" prefWidth="90.0" text="Cancel" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
    </children>
 </AnchorPane>

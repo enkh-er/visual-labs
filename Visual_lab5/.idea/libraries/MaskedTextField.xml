@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="MaskedTextField">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../MaskedTextField/out/artifacts/MaskedTextField_jar/MaskedTextField.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../MaskedTextField/out/artifacts/MaskedTextField_jar/MaskedTextField.jar!/javafx.base" />
+      <root url="jar://$PROJECT_DIR$/../MaskedTextField/out/artifacts/MaskedTextField_jar/MaskedTextField.jar!/javafx.controls" />
+      <root url="jar://$PROJECT_DIR$/../MaskedTextField/out/artifacts/MaskedTextField_jar/MaskedTextField.jar!/javafx.fxml" />
+      <root url="jar://$PROJECT_DIR$/../MaskedTextField/out/artifacts/MaskedTextField_jar/MaskedTextField.jar!/javafx.graphics" />
+      <root url="jar://$PROJECT_DIR$/../MaskedTextField/out/artifacts/MaskedTextField_jar/MaskedTextField.jar!/javafx.media" />
+      <root url="jar://$PROJECT_DIR$/../MaskedTextField/out/artifacts/MaskedTextField_jar/MaskedTextField.jar!/javafx.swing" />
+      <root url="jar://$PROJECT_DIR$/../MaskedTextField/out/artifacts/MaskedTextField_jar/MaskedTextField.jar!/javafx.web" />
+    </SOURCES>
+  </library>
+</component>

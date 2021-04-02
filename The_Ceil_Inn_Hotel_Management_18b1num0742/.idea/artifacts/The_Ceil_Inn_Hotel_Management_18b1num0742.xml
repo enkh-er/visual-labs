@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="The_Ceil_Inn_Hotel_Management_18b1num0742">
+    <output-path>$PROJECT_DIR$/out/artifacts/The_Ceil_Inn_Hotel_Management_18b1num0742</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="application.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="The_Ceil_Inn_Hotel_Management_18b1num0742.jar">
+        <element id="module-output" name="The_Ceil_Inn_Hotel_Management_18b1num0742" />
+      </element>
+    </root>
+  </artifact>
+</component>

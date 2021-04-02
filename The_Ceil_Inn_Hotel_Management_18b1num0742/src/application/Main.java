@@ -2,25 +2,35 @@ package application;
 
 import application.controllers.HomePageController;
 import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Hotel management system
+ * @version 1.0
+ * @author EnkhErdene
+ */
 public class Main extends Application {
+    /**
+     * Programiin vndsen tsonh
+     */
     private Stage primaryStage;
+    /**
+     * Programiin vndsen tsonhnii aguulagch
+     */
     private FlowPane homePage;
     public static void main(String[] args) {
         launch(args);
     }
 
+    /**
+     * Programiig ehlvvleh method
+     * @param primaryStage = programiin vndsen tsonh
+     */
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
@@ -28,18 +38,16 @@ public class Main extends Application {
         initHomePageLoad();
     }
 
+    /**
+     * Programiin vndsen page-iig vvsgene
+     */
     public void initHomePageLoad(){
         try {
-            // Load root layout from fxml file.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/Homepage.fxml"));
             homePage = (FlowPane) loader.load();
-
-            // Show the scene containing the root layout.
             Scene scene = new Scene(homePage);
             primaryStage.setScene(scene);
-
-            // Give the controller access to the main app.
             HomePageController controller = loader.getController();
             controller.setMain(this);
             primaryStage.show();
@@ -50,10 +58,6 @@ public class Main extends Application {
 
     public Stage getPrimaryStage() {
         return primaryStage;
-    }
-
-    public void handleCancel() {
-        primaryStage.close();
     }
 
 }

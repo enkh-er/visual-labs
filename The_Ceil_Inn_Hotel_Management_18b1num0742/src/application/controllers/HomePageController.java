@@ -1,15 +1,11 @@
 package application.controllers;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import application.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -21,42 +17,20 @@ public class HomePageController {
     private Main main;
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
-    private Button btnCustomers;
-
-    @FXML
-    private Button btnOcupancies;
-
-    @FXML
-    private Button btnRooms;
-
-    @FXML
-    private Button btnPayments;
-
-    @FXML
-    private Button btnEmployees;
-
-    @FXML
-    private Button btnClose;
-
-    @FXML
     void initialize() {
-
     }
 
-    public Main getMain() {
-        return main;
-    }
-
+    /**
+     * Main classiig onoono
+     * @param main = programiin vndsen main class
+     */
     public void setMain(Main main) {
         this.main = main;
     }
 
+    /**
+     * Hereglegchiin medeelliig haruulah tsonhiig vvsgene
+     */
     @FXML
     private void handleCustomerRecords() {
         try {
@@ -80,6 +54,9 @@ public class HomePageController {
         }
     }
 
+    /**
+     * Ajilchnii medeelliig haruulah tsonhiig vvsgene
+     */
     @FXML
     private void handleEmployeesRecords() {
         try {
@@ -99,6 +76,10 @@ public class HomePageController {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Oroonii medeelliig haruulah tsonhiig vvsgene
+     */
     @FXML
     private void handleRoomsRecords() {
         try {
@@ -119,6 +100,55 @@ public class HomePageController {
         }
     }
 
+    /**
+     * Tvreeslegdsen oroonii medeelliig haruulah tsonhiig vvsgene
+     */
+    @FXML
+    private void handleOccupancies() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/Occupancies.fxml"));
+            Parent page = loader.load();
+            dialogStage = new Stage();
+            dialogStage.setTitle("Ceil Inn - Occupancies");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(main.getPrimaryStage());
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+            OccupanciesController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            dialogStage.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Tolboriin medeelliig haruulah tsonhiig vvsgene
+     */
+    @FXML
+    private void handlePayments() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/Payments.fxml"));
+            Parent page = loader.load();
+            dialogStage = new Stage();
+            dialogStage.setTitle("Ceil Inn - Payments");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(main.getPrimaryStage());
+            Scene scene = new Scene(page);
+            dialogStage.setScene(scene);
+            PaymentsController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            dialogStage.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Vndsen tsonhiig haana
+     */
     @FXML
     private void handleCancel() {
         main.getPrimaryStage().close();

@@ -27,16 +27,16 @@
             <Label text="Room Number:" />
             <Label text="Room Type:" GridPane.rowIndex="1" />
             <Label text="Bed Type:" GridPane.rowIndex="2" />
-            <Label fx:id="txtRate" text="Rate:" GridPane.rowIndex="3" />
+            <Label text="Rate:" GridPane.rowIndex="3" />
             <TextField fx:id="txtRoomNumber" maxWidth="-Infinity" prefWidth="100.0" GridPane.columnIndex="1" />
-            <TextField fx:id="txtTitle" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtRate" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label text="Status:" GridPane.rowIndex="4" />
             <ComboBox fx:id="cbxRoomTypes" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <ComboBox fx:id="cbxBedTypes" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <ComboBox fx:id="cbxOccupanciesStatus" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <Button fx:id="btnOK" layoutX="154.0" layoutY="241.0" mnemonicParsing="false" prefWidth="90.0" text="OK" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="100.0" />
+      <Button fx:id="btnOK" layoutX="154.0" layoutY="241.0" mnemonicParsing="false" onAction="#saveCustomer" prefWidth="90.0" text="OK" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="100.0" />
       <Button fx:id="btnCancel" layoutX="269.0" layoutY="241.0" mnemonicParsing="false" onAction="#closeDialogStage" prefWidth="90.0" text="Cancel" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
    </children>
 </AnchorPane>

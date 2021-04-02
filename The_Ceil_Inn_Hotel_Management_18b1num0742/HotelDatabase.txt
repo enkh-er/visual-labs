@@ -1,0 +1,49 @@
+create DATABASE Hotel ;
+use Hotel;
+create table Customer(
+accountNumber varchar(10) primary key,
+firstName varchar(30), 
+lastName varchar(30), 
+phoneNumber varchar(15), 
+emergencyName varchar(30), 
+emergencyPhone varchar(15)
+);
+create table Employee(
+employeeNumber varchar(10) primary key,
+firstName varchar(30), 
+lastName varchar(30), 
+title varchar(30)
+);
+create table Room(
+roomNumber varchar(10) primary key,
+roomType varchar(30), 
+bedType varchar(30), 
+rate double,
+status varchar(15)
+);
+
+create table Occupancy(
+occupancyNumber varchar(10) primary key,
+dateOccupied date, 
+processedBy varchar(10), 
+processedFor varchar(10), 
+roomOccupied varchar(10), 
+rateApplied double,
+phoneUse double
+);
+
+create table Payment(
+receiptNumber int primary key,
+employeeNumber varchar(10) ,
+paymentDate date, 
+accountNumber varchar(10), 
+firstDayOccupied date, 
+lastDatOccupied date, 
+totalNights int,
+phoneUse double,
+amountCharged double,
+subTotal double,
+taxRate double,
+taxAmount double,
+totalAmoundPaid double
+);

@@ -1,52 +1,50 @@
 package application.controllers;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
+
+import application.database.RoomDAO;
+import application.model.Room;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class RoomsController {
 
     @FXML
-    private ResourceBundle resources;
+    private TableView<Room> lvwRooms;
 
     @FXML
-    private URL location;
+    private TableColumn<Room, String> colRoomNumber;
 
     @FXML
-    private TableView<?> lvwRooms;
+    private TableColumn<Room, String> colRoomType;
 
     @FXML
-    private TableColumn<?, ?> colRoomNumber;
+    private TableColumn<Room, String> colBedType;
 
     @FXML
-    private TableColumn<?, ?> colRoomType;
+    private TableColumn<Room, Double> colRate;
 
     @FXML
-    private TableColumn<?, ?> colBedType;
+    private TableColumn<Room, String> colAvailable;
 
-    @FXML
-    private TableColumn<?, ?> colRate;
+    ObservableList<Room> tableDatas= FXCollections.observableArrayList();
 
-    @FXML
-    private TableColumn<?, ?> colAvailable;
-
-    @FXML
-    private Button btnClose;
-
-    @FXML
-    private Button btnNewRoom;
+    RoomDAO dao=new RoomDAO();
 
     private Stage dialogStage;
+
+    public ObservableList<Room> getTableDatas() {
+        return tableDatas;
+    }
 
     public void setDialogStage(javafx.stage.Stage dialogStage) {
         this.dialogStage = dialogStage;
@@ -57,6 +55,9 @@ public class RoomsController {
         dialogStage.close();
     }
 
+    /**
+     * Shine oroo vvsgeh tsonhiig vvsgene
+     */
     @FXML
     private void handleNewRoom() {
         try {
@@ -71,6 +72,7 @@ public class RoomsController {
             newRoomStage.setScene(scene);
             NewRoomController controller = loader.getController();
             controller.setDialogStage(newRoomStage);
+            controller.setRoomsController(this);
             newRoomStage.showAndWait();
 
         } catch (IOException e) {
@@ -78,9 +80,21 @@ public class RoomsController {
         }
     }
 
+    /**
+     * Oroonii medeelliig hvsnegted haruulah method
+     */
+    public void updateTableData(){
+        colRoomNumber.setCellValueFactory(new PropertyValueFactory<Room,String>("roomNo"));
+        colRoomType.setCellValueFactory(new PropertyValueFactory<Room,String>("roomType"));
+        colBedType.setCellValueFactory(new PropertyValueFactory<Room,String>("bedType"));
+        colRate.setCellValueFactory(new PropertyValueFactory<Room,Double>("rate"));
+        colAvailable.setCellValueFactory(new PropertyValueFactory<Room,String>("status"));
+        tableDatas.addAll(dao.findAll());
+        lvwRooms.setItems(tableDatas);
+    }
 
     @FXML
     void initialize() {
-
+        updateTableData();
     }
 }
