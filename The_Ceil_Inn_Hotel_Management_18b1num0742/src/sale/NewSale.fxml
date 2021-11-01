@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="647.0" prefWidth="750.0" style="-fx-padding: 20; -fx-background-color: white;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sale.NewSaleController">
+    <children>
+        <Label layoutX="104.0" layoutY="59.0" styleClass="header-label" text="Sale Order" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <GridPane layoutX="420.0" layoutY="90.0" prefHeight="108.0" prefWidth="321.0" vgap="13.0" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="50.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.0" minWidth="10.0" prefWidth="132.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="189.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Bill Date" />
+                <Label text="Customer DL" GridPane.rowIndex="2" />
+                <Label text="Customer Location" GridPane.rowIndex="1" />
+                <TextField fx:id="txtLocation" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="txtCustomerDL" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <DatePicker fx:id="dtpBillDate" prefHeight="27.0" prefWidth="197.0" GridPane.columnIndex="1" />
+            </children>
+        </GridPane>
+        <TableView fx:id="table" layoutX="60.0" layoutY="235.0" prefHeight="125.0" prefWidth="670.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="175.0" />
+        <Button layoutX="613.0" layoutY="331.0" mnemonicParsing="false" onAction="#handleAddItem" text="Add New Item" AnchorPane.rightAnchor="0.0" />
+        <GridPane hgap="10.0" layoutX="20.0" layoutY="368.0" prefHeight="174.0" prefWidth="458.0" vgap="10.0" AnchorPane.leftAnchor="20.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.0" minWidth="10.0" prefWidth="135.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="194.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="110.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Tax Amount" />
+                <Label prefHeight="20.0" prefWidth="130.0" text="Custom Tax Amount" GridPane.rowIndex="1" />
+                <Label text="Discount" GridPane.rowIndex="2" />
+                <Label text="Total" GridPane.rowIndex="3" />
+                <Label text="Grand Total" GridPane.rowIndex="4" />
+                <Label fx:id="lblTaxAmount" text="0" GridPane.columnIndex="1" />
+                <Label fx:id="lblTotal" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label fx:id="lblGrandTotal" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <TextField fx:id="txtCustomTaxAmount" style="-fx-padding: 3 0;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="txtDiscount" style="-fx-padding: 3 0;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <ComboBox fx:id="cmbPercentage" prefWidth="150.0" promptText="Percentage" styleClass="cus-combo-box" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+        <ButtonBar layoutX="39.0" layoutY="564.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="243.0" AnchorPane.leftAnchor="0.0">
+            <buttons>
+                <Button mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#handleSaveSale" text="Save" />
+                <Button mnemonicParsing="false" onAction="#handleCancelSale" text="Cancel" />
+                <Button minWidth="51.0" mnemonicParsing="false" onAction="#handlePrintSale" prefHeight="30.0" text="Print" />
+            </buttons>
+        </ButtonBar>
+        <GridPane layoutX="60.0" layoutY="90.0" prefHeight="108.0" prefWidth="321.0" vgap="13.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.0" minWidth="10.0" prefWidth="132.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="189.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Bill No" />
+                <Label text="Customer Name" GridPane.rowIndex="1" />
+                <Label text="Customer TIN" GridPane.rowIndex="2" />
+                <TextField fx:id="txtBillNo" promptText="NaN" GridPane.columnIndex="1" />
+                <TextField fx:id="txtCustomerTin" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <ComboBox fx:id="cbCustomerName" prefHeight="25.0" prefWidth="194.0" styleClass="cus-combo-box" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

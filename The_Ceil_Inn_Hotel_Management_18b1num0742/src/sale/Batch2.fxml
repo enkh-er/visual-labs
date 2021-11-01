@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="300.0" prefWidth="550.0" style="-fx-padding: 30;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sale.BatchController">
+   <children>
+      <TableView fx:id="table" layoutX="60.0" layoutY="47.0" prefHeight="200.0" prefWidth="466.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columns>
+            <TableColumn fx:id="batchName" prefWidth="109.0" text="Batch" />
+            <TableColumn fx:id="colExpiry" prefWidth="98.0" text="Expiry" />
+            <TableColumn fx:id="colRate" prefWidth="68.0" text="Rate" />
+            <TableColumn fx:id="colMRP" prefWidth="68.0" text="MRP" />
+            <TableColumn fx:id="colAvailable" prefWidth="76.0" text="Available" />
+            <TableColumn fx:id="colSelect" prefWidth="70.0" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
